@@ -107,7 +107,7 @@ input:checked {
 @media (min-width: 700px) {
     .usability {
         left: 10%;
-        width: 90px;
+        width: 120px;
         height: 50%;
         margin-left: 0;
         flex-direction: column;
@@ -115,6 +115,9 @@ input:checked {
     .circle {
         width: 60px;
         height: 60px;
+    }
+    .left {
+        margin-left: 60px;
     }
     .circle div {
         width: 40px;

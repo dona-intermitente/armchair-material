@@ -7,15 +7,15 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x58DDC8);
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 200);
-camera.position.set(0, 1.5, 2.5);
+camera.position.set(0, 1.6, 2.2);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.maxPolarAngle = Math.PI * 0.5;
-controls.minDistance = 1.5;
+controls.maxPolarAngle = Math.PI * 0.4;
+controls.minDistance = 2.2;
 controls.maxDistance = 5;
 
 scene.add(new THREE.AmbientLight(0xffffff, 0.8));
@@ -36,7 +36,6 @@ new GLTFLoader().load('src/model/sofa.glb', function (gltf) {
     texture.wrapT = THREE.RepeatWrapping;
     texture.repeat.set(1, 1);
     cloth.material.map = texture;
-    scene.add(model);
 
     document.addEventListener('click', myFunction)
     function myFunction(e) {
@@ -48,6 +47,19 @@ new GLTFLoader().load('src/model/sofa.glb', function (gltf) {
             cloth.material.map = texture;
         }
     }
+
+    const shadow = new THREE.TextureLoader().load('src/shade.png');
+    const mesh = new THREE.Mesh(
+        new THREE.PlaneGeometry(1.9, 1.2),
+        new THREE.MeshBasicMaterial({
+            map: shadow, blending: THREE.MultiplyBlending, toneMapped: false, transparent: true
+        })
+    );
+    mesh.rotation.x = - Math.PI / 2;
+    mesh.renderOrder = 2;
+    model.add(mesh);
+
+    scene.add(model);
 });
 
 function render() {
