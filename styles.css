@@ -21,7 +21,7 @@
     flex-direction: column;
     left: 50%;
     width: 70%;
-    bottom: 120px;
+    bottom: 100px;
     margin-left: -35%;
     position: absolute;
 }
@@ -51,6 +51,7 @@ input {
     border-radius: 50%;
     background-size: cover;
     appearance: none;
+    cursor: pointer;
 }
 
 input:checked {
@@ -77,15 +78,72 @@ input:checked {
     display: flex;
     justify-content: space-evenly;
     left: 50%;
-    width: 70%;
-    bottom: 50px;
-    margin-left: -35%;
+    width: 50%;
+    bottom: 30px;
+    margin-left: -25%;
     position: absolute;
 }
 
-.usability img {
-    width: 30px;
-    padding: 5px;
+.circle {
     border-radius: 50%;
     background-color: white;
+}
+
+.circle div {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-size: cover;
+}
+
+.move {
+    background-image: url(src/Doorbell.svg);
+}
+
+.zoom {
+    background-image: url(src/Easy.svg);
+}
+
+@media (min-width: 700px) {
+    .usability {
+        left: 10%;
+        width: 90px;
+        height: 50%;
+        margin-left: 0;
+        flex-direction: column;
+    }
+    .circle {
+        width: 60px;
+        height: 60px;
+    }
+    .circle div {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+    }
+    .move {
+        background-image: url(src/click.svg);
+    }
+    .zoom {
+        background-image: url(src/scroll.svg);
+    }
+    .triangle {
+        border-top: 10px solid transparent;
+        border-right: 15px solid white;
+        border-bottom: 10px solid transparent;
+    }
+    .samples {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        left: 80%;
+        width: auto;
+        height: 70%;
+        margin-left: 0;
+    }
+    .textures {
+        width: 50px;
+        height: 100%;
+        flex-direction: column;
+    }
 }
