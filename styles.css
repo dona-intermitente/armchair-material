@@ -2,6 +2,19 @@
     margin: 0;
 }
 
+.logo {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    border-radius: 0 0 100%;
+    background-color: white;
+}
+
+.logo img {
+    width: 40px;
+    margin: 25px;
+}
+
 .samples {
     display: flex;
     align-items: center;
@@ -58,4 +71,21 @@ input:checked {
 }
 #yellow {
     background-image: url(src/materials/yellow.jpg);
+}
+
+.usability {
+    display: flex;
+    justify-content: space-evenly;
+    left: 50%;
+    width: 70%;
+    bottom: 50px;
+    margin-left: -35%;
+    position: absolute;
+}
+
+.usability img {
+    width: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
 }
