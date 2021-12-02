@@ -1,0 +1,23 @@
+{
+  "name": "armchair-material",
+  "version": "1.0.0",
+  "description": "",
+  "main": "armchairMaterial.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dona-intermitente/armchair-material.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dona-intermitente/armchair-material/issues"
+  },
+  "homepage": "https://github.com/dona-intermitente/armchair-material#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
